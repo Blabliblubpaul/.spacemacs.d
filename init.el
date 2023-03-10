@@ -1,4 +1,4 @@
-;; -*- mode: emacs-lisp; lexical-binding: t ; buffer-read-only: nil; -*-
+;; -*- mode: emacs-lisp; lexical-binding: t ; buffer-read-only: t; -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 (message "Beginning of %s" "~/.spacemacs.d/init.el")
@@ -50,7 +50,8 @@ This function should only modify configuration layer settings."
      ;; lsp
      ;; markdown
      multiple-cursors
-     org
+     (org   :variables
+            org-enable-roam-support t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom
@@ -64,7 +65,7 @@ This function should only modify configuration layer settings."
      json
      html
      ;; ;; private layers
-     asl_
+     asl_00
      asl_f8
      )
 
@@ -76,7 +77,11 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(xclip multi-term yasnippet yasnippet-snippets)
+   dotspacemacs-additional-packages '(xclip
+                                      multi-term
+                                      ;; yasnippet
+                                      ;; yasnippet-snippets
+                                      )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()

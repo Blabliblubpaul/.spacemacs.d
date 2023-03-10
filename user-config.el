@@ -1,4 +1,5 @@
-;;; user-config.el --- This is the sourced out dotspacemacs/user-config() in init.el (the dotspacemacs file)  -*- lexical-binding: t; buffer-read-only: nil; -*- 
+;;; -*-  lexical-binding: t; buffer-read-only: t; -*-
+;;; user-config.el --- This is the sourced out dotspacemacs/user-config() in init.el (the dotspacemacs file)
 
 ;; Copyright (C) 2021  Aroldo Souza-Leite
 
@@ -119,18 +120,20 @@ before packages are loaded."
   ;;; <recentf>
   (setq recentf-save-file
         (concat spacemacs-private-cache-directory "recentf"))
+  (if (not (file-exists-p recentf-save-file))
+  (make-empty-file recentf-save-file t))
   ;;; </recentf>
 
   ;;; <xclip>
   (xclip-mode t)
   ;;; </xclip>
 
-  ;;; <yasnippet>
-  (setq yas-snippet-private-directory
-        (concat spacemacs-private-directory "snippets/"))
-  (add-to-list 'yas-snippet-dirs yas-snippet-private-directory)
-  (yas-reload-all)
-  ;;; </yasnippet>
+  ;; ;;; <yasnippet>
+  ;; (setq yas-snippet-private-directory
+  ;;       (concat spacemacs-private-directory "snippets/"))
+  ;; (add-to-list 'yas-snippet-dirs yas-snippet-private-directory)
+  ;; (yas-reload-all)
+  ;; ;;; </yasnippet>
 
   ;;; <projectile>
   (setq projectile-indexing-method 'native)
@@ -143,6 +146,8 @@ before packages are loaded."
   ;;; </python>
 
   ;;; <dired>
+  (setq dired-garbage-files-regexp 
+        "\\(?:\\.\\(?:aux\\|bak\\|out\\|Trash\\|rubbish\\|DELETEME\\|DEPRECATED\\|dvi\\|log\\|orig\\|rej\\|toc\\)\\)\\'")
   (add-hook
    'dired-mode-hook
    (lambda()(setq dired-auto-revert-buffer t)))
@@ -161,6 +166,14 @@ before packages are loaded."
   ;;; ;; auto-save is a real mess:
   (setq auto-save-default nil)
   ;;; ;; </auto-save>
+
+  ;;; ;; <org-roam>
+  (setq org-roam-directory (file-truename "~/devel/Zettelkasten"))
+  (setq org-roam-db-location (concat spacemacs-private-directory "org-roam-db"))
+  (if (not (file-exists-p org-roam-directory))
+  (make-directory org-roam-directory  t))
+  (org-roam-db-autosync-mode t)
+  ;;; ;; </org-roam>
 )
 (-user-config)
 ;;; ;;
