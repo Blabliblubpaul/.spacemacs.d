@@ -11,11 +11,18 @@
 (defalias 'asl/org-backward                      'org-backward-heading-same-level)
 (defalias 'asl/org-jump                          'org-goto)
 (defalias 'asl/org-insert-heading-r-c            'org-insert-heading-respect-content)
+(defalias 'asl/org-section-up                    'org-metaup)
+(defalias 'asl/org-section-down                  'org-metadown)
+(defalias 'asl/org-open-link                     'org-open-at-point)
 ;; ;;; </asl/org aliases>
 ;; ;;; <asl/org functions>
 (defun asl/org-insert-heading-below()
   (interactive)
   (end-of-line)
+  (org-meta-return))
+(defun asl/add-item()
+  (interactive)
+  (org-meta-return)
   (org-meta-return))
 ;; ;;; </asl/org functions>
 
@@ -29,8 +36,11 @@
 (define-key org-mode-map (kbd "<f8> <down>")         'asl/org-next )
 (define-key org-mode-map (kbd "<f8> <prior>")        'asl/org-backward)
 (define-key org-mode-map (kbd "<f8> <f8>")           'asl/org-insert-heading-r-c ) 
-(define-key org-mode-map (kbd "<f8> RET")            'asl/org-insert-heading-below) 
-
+(define-key org-mode-map (kbd "<f8> RET")            'asl/org-insert-heading-below)
+(define-key org-mode-map (kbd "<f8> <S-up>")         'asl/org-section-up)
+(define-key org-mode-map (kbd "<f8> <S-down>")       'asl/org-section-down)
+(define-key org-mode-map (kbd "<f8> <o>")            'asl/org-open-link)
+(define-key org-mode-map (kbd "<f8> <S-RET>")        'asl/add-item)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;; </asl/org keys>
 
