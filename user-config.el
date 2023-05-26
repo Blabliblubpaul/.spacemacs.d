@@ -137,6 +137,8 @@ before packages are loaded."
 
   ;;; <projectile>
   (setq projectile-indexing-method 'native)
+  (projectile-mode)
+  (bind-key (kbd "<f12> p") projectile-command-map)
   ;;; </projectile>
 
   ;;; <python>
@@ -174,6 +176,20 @@ before packages are loaded."
   (make-directory org-roam-directory  t))
   (org-roam-db-autosync-mode t)
   ;;; ;; </org-roam>
+
+  ;;; ;; <deft>
+  ;;; ;; from  https://jonathanchu.is/posts/setting-up-deft-mode-in-emacs-with-org-mode/
+ (setq deft-extension "org")
+ (setq deft-text-mode 'org-mode)
+ (setq deft-directory "~/devel/Zettelkasten")
+ (setq deft-use-filename-as-title t)
+ (setq deft-recursive t)
+ ;;; ;; </deft>
+
+ ;;; ;; <krempelkiste>
+ (let ((krempelkiste (concat spacemacs-private-directory "krempelkiste.el")))
+   (message "Krempelkiste:%s" krempelkiste)
+   (load-file krempelkiste))
 )
 (-user-config)
 ;;; ;;

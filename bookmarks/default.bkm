@@ -2,16 +2,46 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Zettelkasten"
+(("site-packages"
+ (filename . "~/.local/pyaro/lib/python3.8/site-packages/")
+ (front-context-string . "mutagen\n  drwxrw")
+ (rear-context-string . "96 Nov 15 05:04 ")
+ (position . 6830))
+("pyaro"
+ (filename . "~/.local/pyaro/")
+ (front-context-string . "lib\n  drwxr-xr-x")
+ (rear-context-string . "96 Okt 16 10:53 ")
+ (position . 351))
+("process_track_folders.py"
+ (filename . "~/devel/sound_utils/process_track_folders.py")
+ (front-context-string . "\n\n##############")
+ (rear-context-string . "= logging.INFO\n\n")
+ (position . 311))
+("octo-Musiksammlung"
+ (filename . "~/Musik/octo-Musiksammlung/")
+ (front-context-string . "HL\n  drwxr-xr-x ")
+ (rear-context-string . "96 Mär 19 22:13 ")
+ (position . 430))
+("music_cd_utils.py"
+ (filename . "~/devel/sound_utils/music_cd_utils.py")
+ (front-context-string . "():\n    name = \"")
+ (rear-context-string . "ckName_BadString")
+ (position . 3038))
+("sound_utils"
+ (filename . "~/devel/sound_utils/")
+ (front-context-string . "music_cd_utils.p")
+ (rear-context-string . "81 Mär 13 11:35 ")
+ (position . 432))
+("Zettelkasten"
  (filename . "~/devel/Zettelkasten/")
  (front-context-string)
  (rear-context-string . "Mär 10 15:15 ..\n")
  (position . 151))
 ("org-capture-last-stored"
- (filename . "~/devel/Zettelkasten/20230310163210-emacs_lisp.org")
- (front-context-string . "A really cool pr")
- (rear-context-string . "tle: Emacs Lisp\n")
- (position . 88))
+ (filename . "~/devel/Zettelkasten/20230317161825-mail_provider.org")
+ (front-context-string)
+ (rear-context-string . "\n\n# END CONTENT\n")
+ (position . 323))
 ("install-utils"
  (filename . "~/devel/sysadmin/LM/install-utils/")
  (front-context-string)
@@ -22,11 +52,6 @@
  (front-context-string . "fundamental-mode")
  (rear-context-string . "96 Nov  9 18:13 ")
  (position . 262))
-("scratch.el"
- (filename . "~/.spacemacs.d/dig_spacemacs/scratch.el")
- (front-context-string . ";; Local Variabl")
- (rear-context-string . "\") 'greeting)\n\n\n")
- (position . 357))
 ("asl_org.el"
  (filename . "~/.spacemacs.d/layers/asl_f8/local/asl_org/asl_org.el")
  (front-context-string)
@@ -39,9 +64,9 @@
  (position . 302))
 ("user-config.el"
  (filename . "~/.spacemacs.d/user-config.el")
- (front-context-string . "  ;;; ;; </rst>\n")
- (rear-context-string . "  'rst-compile)\n")
- (position . 4737))
+ (front-context-string . "\n  ;;; ;; </deft")
+ (rear-context-string . "ode 'org-mode)\n ")
+ (position . 5669))
 ("tmp"
  (filename . "~/tmp/")
  (front-context-string)
